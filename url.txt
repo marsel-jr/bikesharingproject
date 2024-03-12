@@ -1,2 +1,1 @@
-local: https://upgraded-barnacle-q7v9r7rq69q6c94g4-8501.app.github.dev/#pertanyaan-3
-network: 
+https://bikesharingproject-swbkugpfpupe6vfjj79f5c.streamlit.app/#pertanyaan-3
