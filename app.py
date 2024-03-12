@@ -33,6 +33,16 @@ with st.sidebar:
         ("Pertanyaan 1", "Pertanyaan 2", "Pertanyaan 3")
     )
 
+    st.sidebar.title("About Me!")
+    st.sidebar.subheader("Nama")
+    st.sidebar.write("Marsel Christian Junior")
+
+    st.sidebar.subheader("Email")
+    st.sidebar.write("marsel.jr88@gmail.com")
+
+    st.sidebar.subheader("ID Dicoding")
+    st.sidebar.write("marsel_christian_j")
+
 st.header("Proyek Akhir Dicoding")
 st.title("Bike Sharing Dashboard")
 
