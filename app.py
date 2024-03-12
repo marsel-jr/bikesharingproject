@@ -27,32 +27,26 @@ filtered_data_3 = data_day[(data_day["workingday"] == 1) & (data_day["casual"] >
 
 # Create Streamlit app
 with st.sidebar:
-    st.sidebar.title("About Me!")
-
-    st.sidebar.subheader("Nama")
-    st.sidebar.write("Marsel Christian Junior")
-
-    st.sidebar.subheader("Email")
-    st.sidebar.write("marsel.jr88@gmail.com")
-
-    st.sidebar.subheader("ID Dicoding")
-    st.sidebar.write("marsel_christian_j")
+    st.sidebar.title("Menu Pertanyaan")
+    selected_question = st.sidebar.selectbox(
+        "Pilih Pertanyaan:",
+        ("Pertanyaan 1", "Pertanyaan 2", "Pertanyaan 3")
+    )
 
 st.header("Proyek Akhir Dicoding")
 st.title("Bike Sharing Dashboard")
 
-# Pertanyaan 1
-st.header("Pertanyaan 1:")
-st.write(f"Jumlah total sewa sepeda untuk tahun 2012 selama musim gugur (musim 3): {total_sewa_sepeda_1}")
-
-# Pertanyaan 2
-st.header("Pertanyaan 2:")
-st.write(f"Jumlah total sepeda sewaan yang digunakan pada hari libur (liburan = 1) selama musim panas tahun 2011: {total_sepeda_sewaan_2}")
-
-# Pertanyaan 3
-st.header("Pertanyaan 3:")
-st.write("Visualisasi jumlah sewa sepeda casual pada hari kerja:")
-fig = px.bar(filtered_data_3, x="weekday", y="casual", title="Jumlah Sewa Sepeda Casual pada Hari Kerja")
-fig.update_xaxes(title="Hari Kerja")
-fig.update_yaxes(title="Jumlah Sewa Sepeda Casual")
-st.plotly_chart(fig)
+# Tampilkan pertanyaan yang dipilih
+if selected_question == "Pertanyaan 1":
+    st.header("Pertanyaan 1:")
+    st.write(f"Jumlah total sewa sepeda untuk tahun 2012 selama musim gugur (musim 3): {total_sewa_sepeda_1}")
+elif selected_question == "Pertanyaan 2":
+    st.header("Pertanyaan 2:")
+    st.write(f"Jumlah total sepeda sewaan yang digunakan pada hari libur (liburan = 1) selama musim panas tahun 2011: {total_sepeda_sewaan_2}")
+else:
+    st.header("Pertanyaan 3:")
+    st.write("Visualisasi jumlah sewa sepeda casual pada hari kerja:")
+    fig = px.bar(filtered_data_3, x="weekday", y="casual", title="Jumlah Sewa Sepeda Casual pada Hari Kerja")
+    fig.update_xaxes(title="Hari Kerja")
+    fig.update_yaxes(title="Jumlah Sewa Sepeda Casual")
+    st.plotly_chart(fig)
