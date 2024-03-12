@@ -26,6 +26,19 @@ total_sepeda_sewaan_2 = filtered_data_2["cnt"].sum()
 filtered_data_3 = data_day[(data_day["workingday"] == 1) & (data_day["casual"] > 0)]
 
 # Create Streamlit app
+with st.sidebar:
+    st.sidebar.title("About Me!")
+
+    st.sidebar.subheader("Nama")
+    st.sidebar.write("Marsel Christian Junior")
+
+    st.sidebar.subheader("Email")
+    st.sidebar.write("marsel.jr88@gmail.com")
+
+    st.sidebar.subheader("ID Dicoding")
+    st.sidebar.write("marsel_christian_j")
+
+st.header("Proyek Akhir Dicoding")
 st.title("Bike Sharing Dashboard")
 
 # Pertanyaan 1
