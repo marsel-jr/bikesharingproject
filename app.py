@@ -77,8 +77,15 @@ elif selected_question == "Pertanyaan 2":
     st.plotly_chart(fig)
 else:
     st.header("Pertanyaan 3:")
-    st.write("Visualisasi jumlah sewa sepeda casual pada hari kerja:")
+    st.write("Bagaimana cara meningkatkan jumlah rental sepeda yang digunakan oleh pengguna biasa (casual) pada hari kerja:")
     fig = px.bar(filtered_data_3, x="weekday", y="casual", title="Jumlah Sewa Sepeda Casual pada Hari Kerja")
     fig.update_xaxes(title="Hari Kerja")
-    fig.update_yaxes(title="Jumlah Sewa Sepeda Casual")
+    fig.update_yaxes(title="Visualisasi Jumlah Sewa Sepeda Casual & Strateginya")
     st.plotly_chart(fig)
+    
+    st.subheader("Strategi guna meningkatkan jumlah rental sepeda:")
+    st.write("- Promosi khusus untuk hari-hari tertentu yang memiliki grafik yang rendah seperti pada grafik (Monday & Wednesday), seperti diskon khusus atau penawaran khusus yang hanya berlaku pada hari kerja.")
+    st.write("- Memastikan fasilitas penyewaan sepeda, seperti stasiun atau lokasi penyewaan, mudah diakses dan dalam kondisi baik selama hari kerja.")
+    st.write("- Mempertimbangkan untuk menambah jumlah sepeda yang tersedia pada hari kerja untuk mengakomodasi permintaan yang lebih tinggi.")
+    st.write("- Tingkatkan upaya pemasaran khusus untuk hari kerja, seperti iklan online yang menargetkan pengguna biasa pada hari kerja.")
+    st.write("- Membuat program loyalitas atau diskon yang berkelanjutan untuk pengguna biasa yang sering menyewa sepeda pada hari kerja.")
