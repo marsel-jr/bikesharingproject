@@ -53,6 +53,16 @@ if selected_question == "Pertanyaan 1":
 elif selected_question == "Pertanyaan 2":
     st.header("Pertanyaan 2:")
     st.write(f"Jumlah total sepeda sewaan yang digunakan pada hari libur (liburan = 1) selama musim panas tahun 2011: {total_sepeda_sewaan_2}")
+    # Filter tahun 2011, musim panas (season 2), dan hari libur (holiday = 1)
+    filtered_data = data_day[(data_day["yr"] == 0) & (data_day["season"] == 2) & (data_day["holiday"] == 1)]
+    # Hitung jumlah total sepeda sewaan
+    total_sepeda_sewaan = filtered_data["cnt"].sum()
+    st.write(f"Jumlah total sepeda sewaan yang digunakan pada hari libur selama musim panas tahun 2011: {total_sepeda_sewaan}")
+    fig = px.bar(filtered_data, x=filtered_data["dteday"], y=filtered_data["cnt"], hover_data=["dteday", "cnt"])
+    fig.update_xaxes(title="Tanggal")
+    fig.update_yaxes(title="Jumlah Sepeda Sewaan")
+    fig.update_layout(title="Visualisasi Jumlah Total Sepeda Sewaan yang Digunakan pada Hari Libur selama Musim Panas Tahun 2011")
+    st.plotly_chart(fig)
 else:
     st.header("Pertanyaan 3:")
     st.write("Visualisasi jumlah sewa sepeda casual pada hari kerja:")
