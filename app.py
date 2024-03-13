@@ -73,14 +73,14 @@ elif selected_question == "Pertanyaan 2":
     fig = px.bar(filtered_data, x=filtered_data["dteday"], y=filtered_data["cnt"], hover_data=["dteday", "cnt"])
     fig.update_xaxes(title="Tanggal")
     fig.update_yaxes(title="Jumlah Sepeda Sewaan")
-    fig.update_layout(title="Visualisasi Jumlah Total Sepeda Sewaan yang Digunakan pada Hari Libur selama Musim Panas Tahun 2011")
+    fig.update_layout(title="Visualisasi Total Sepeda Sewaan yang Digunakan pada Hari Libur")
     st.plotly_chart(fig)
 else:
     st.header("Pertanyaan 3:")
     st.write("Bagaimana cara meningkatkan jumlah rental sepeda yang digunakan oleh pengguna biasa (casual) pada hari kerja:")
-    fig = px.bar(filtered_data_3, x="weekday", y="casual", title="Jumlah Sewa Sepeda Casual pada Hari Kerja")
+    fig = px.bar(filtered_data_3, x="weekday", y="casual", title="Jumlah Sewa Sepeda Casual pada Hari Kerja & Strateginya")
     fig.update_xaxes(title="Hari Kerja")
-    fig.update_yaxes(title="Visualisasi Jumlah Sewa Sepeda Casual & Strateginya")
+    fig.update_yaxes(title="Visualisasi Jumlah Sewa Sepeda Casual")
     st.plotly_chart(fig)
     
     st.subheader("Strategi guna meningkatkan jumlah rental sepeda:")
