@@ -27,6 +27,18 @@ filtered_data_3 = data_day[(data_day["workingday"] == 1) & (data_day["casual"] >
 
 # Create Streamlit app
 st.title("Bike Sharing Dashboard")
+
+with st.sidebar:
+    st.sidebar.title("About Me!")
+    st.sidebar.subheader("Nama")
+    st.sidebar.write("Marsel Christian Junior")
+
+    st.sidebar.subheader("Email")
+    st.sidebar.write("marsel.jr88@gmail.com")
+
+    st.sidebar.subheader("ID Dicoding")
+    st.sidebar.write("marsel_christian_j")
+
 st.header("Menu Pertanyaan")
 selected_question = st.selectbox(
     "Pilih Pertanyaan:",
