@@ -1,4 +1,4 @@
-# Proyek Akhir Dicoding
+# Assignment_Data Science
 # Marsel Christian
 
 ## Setup environment
