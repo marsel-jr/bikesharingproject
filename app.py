@@ -38,7 +38,7 @@ with st.sidebar:
     st.sidebar.write("marsel.jr88@gmail.com")
 
     st.sidebar.subheader("ID Github")
-    st.sidebar.write("marsel_jr")
+    st.sidebar.write("marsel-jr")
 
 st.header("Menu Pertanyaan")
 selected_question = st.selectbox(
