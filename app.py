@@ -29,20 +29,20 @@ filtered_data_3 = data_day[(data_day["workingday"] == 1) & (data_day["casual"] >
 st.title("Assignment Pert_5_-_Data Science")
 st.header("Bike Sharing Dashboard")
 
+# Header
+st.write("### Nama: Marsel Christian Junior")
+st.write("### Email: marsel.jr88@gmail.com")
+st.write("### ID GitHub: marsel-jr")
+
 # Sidebar
 st.sidebar.title("Menu Utama")
 menu_options = ["About Us", "Menu Pertanyaan"]
 selected_menu = st.sidebar.selectbox("Pilih Menu:", menu_options)
 
 if selected_menu == "About Us":
-    st.sidebar.subheader("Nama")
-    st.sidebar.write("Marsel Christian Junior")
-    
-    st.sidebar.subheader("Email")
-    st.sidebar.write("marsel.jr88@gmail.com")
-    
-    st.sidebar.subheader("ID Github")
-    st.sidebar.write("marsel-jr")
+    st.sidebar.subheader("Tentang Kami")
+    st.sidebar.write("Ini adalah aplikasi dashboard berbagi sepeda.")
+
 elif selected_menu == "Menu Pertanyaan":
     st.header("Menu Pertanyaan")
     selected_question = st.selectbox(
