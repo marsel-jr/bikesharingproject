@@ -26,7 +26,7 @@ total_sepeda_sewaan_2 = filtered_data_2["cnt"].sum()
 filtered_data_3 = data_day[(data_day["workingday"] == 1) & (data_day["casual"] > 0)]
 
 # Create Streamlit app
-st.title(""Bike Sharing Project"")
+st.title("Bike Sharing Project")
 
 # Header
 st.write("### Nama: Marsel Christian Junior")
