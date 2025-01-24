@@ -26,7 +26,8 @@ total_sepeda_sewaan_2 = filtered_data_2["cnt"].sum()
 filtered_data_3 = data_day[(data_day["workingday"] == 1) & (data_day["casual"] > 0)]
 
 # Create Streamlit app
-st.title("Bike Sharing Project")
+st.title("Assignment Pert_5_-_Data Science")
+st.header("Bike Sharing Dashboard")
 
 # Header
 st.write("### Nama: Marsel Christian Junior")
@@ -38,9 +39,9 @@ st.sidebar.title("Menu Utama")
 menu_options = ["About Us", "Menu Pertanyaan"]
 selected_menu = st.sidebar.selectbox("Pilih Menu:", menu_options)
 
-if selected_menu == "About Me":
-    st.sidebar.subheader("Tentang Saya")
-    st.sidebar.write("Ini adalah dashboard aplikasi Bike Sharing Project.")
+if selected_menu == "About Us":
+    st.sidebar.subheader("Tentang Kami")
+    st.sidebar.write("Ini adalah aplikasi dashboard berbagi sepeda.")
 
 elif selected_menu == "Menu Pertanyaan":
     st.header("Menu Pertanyaan")
